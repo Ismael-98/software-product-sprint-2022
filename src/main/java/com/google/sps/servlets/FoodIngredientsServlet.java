@@ -35,7 +35,7 @@ public class FoodIngredientsServlet extends HttpServlet {
         "/WEB-INF/Food_Ingredients.csv"));
     while (scanner.hasNextLine()) {
       String line = scanner.nextLine();
-      String[] cells = line.split(";");
+      String[] cells = line.split(",",2);
 
       String name = cells[0];
       String ingredients = cells[1];
