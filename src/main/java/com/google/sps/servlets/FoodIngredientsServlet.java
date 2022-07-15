@@ -12,42 +12,44 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-// package com.google.sps.servlets;
+package com.google.sps.servlets;
 
-// import com.google.gson.Gson;
-// import java.io.IOException;
-// import java.util.LinkedHashMap;
-// import java.util.Scanner;
-// import javax.servlet.annotation.WebServlet;
-// import javax.servlet.http.HttpServlet;
-// import javax.servlet.http.HttpServletRequest;
-// import javax.servlet.http.HttpServletResponse;
+import com.google.gson.Gson;
+import java.io.IOException;
+import java.util.LinkedHashMap;
+import java.util.Scanner;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
-// /** Returns bigfoot data as a JSON object, e.g. {"2017": 52, "2018": 34}] */
-// @WebServlet("/foods-data")
-// public class FoodIngredientsServlet extends HttpServlet {
+/** Returns foods and ingredients data as a JSON object, e.g. {"foodname": "ingredients", "food": "ingredients"}] */
+@WebServlet("/foods-data")
+public class FoodIngredientsServlet extends HttpServlet {
 
-//   private LinkedHashMap<String, String> FoodsIn = new LinkedHashMap<>();
+  private LinkedHashMap<String, String> foodsList = new LinkedHashMap<>();
 
-//   @Override
-//   public void init() {
-//     Scanner scanner = new Scanner(getServletContext().getResourceAsStream(
-//         "/WEB-INF/Food_Ingredients.csv"));
-//     while (scanner.hasNextLine()) {
-//       String line = scanner.nextLine();
-//       String[] cells = line.split(",", 2); // limited split for only the first comma
-//       String foodName = String.valueOf(cells[0]);
-//       String ingredients = String.valueOf(cells[1]);
-//       FoodsIn.put(foodName, ingredients);
-//     }
-//     scanner.close();
-//   }
+  @Override
+  public void init() {
+    Scanner scanner = new Scanner(getServletContext().getResourceAsStream(
+        "/WEB-INF/Food_Ingredients.csv"));
+    while (scanner.hasNextLine()) {
+      String line = scanner.nextLine();
+      String[] cells = line.split(";");
 
-//   @Override
-//   public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
-//     response.setContentType("application/json");
-//     Gson gson = new Gson();
-//     String json = gson.toJson(FoodsIn);
-//     response.getWriter().println(json);
-//   }
-// }
+      String name = cells[0];
+      String ingredients = cells[1];
+
+      foodsList.put(name, ingredients);
+    }
+    scanner.close();
+  }
+
+  @Override
+  public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
+    response.setContentType("application/json");
+    Gson gson = new Gson();
+    String json = gson.toJson(foodsList);
+    response.getWriter().println(json);
+  }
+}
