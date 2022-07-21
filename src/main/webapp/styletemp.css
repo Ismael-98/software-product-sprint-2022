@@ -1,0 +1,21 @@
+body{
+    height: 100%;
+    background-image: url(https://images.unsplash.com/photo-1606851181064-b7507b24377c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80);
+    font-family: 'Kumbh Sans', sans-serif;
+    font-weight: 400;
+  }
+
+.top-left{
+    color: white;
+    position: absolute;
+    top: 8px;
+    left: 16px;
+  }
+.centered {
+    font-size: 70px;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
