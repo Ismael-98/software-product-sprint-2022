@@ -13,8 +13,57 @@
     <div class="top-left">
         <h2>Google Food</h2>
     </div>
-    <div class="centered"> 
+    <div class="centered2">
         Recipes for everyone
     </div>
+    <div class="centered"> 
+        <button onclick="document.getElementById('signin').style.display='block'">
+            Sign in
+        </button>
+        <button onclick="document.getElementById('signup').style.display='block'">
+            Sign up
+        </button>
+    </div>
+
+        <div class="modal" id="signin">
+            <form action="/action_page.php" class="modal-content animate" method="POST">
+                <div class="imgcontainer">
+                    <span onclick="document.getElementById('signin').style.display='none'" 
+                    class="close" title="Close Modal">&times;</span>
+                </div>
+                <div class="container">
+                    <h2 style="text-align: center">Sign in</h2>
+                    <label for="name">Username</label>
+                    <input id="name" placeholder="Username" type="text" required />
+                    <label for="password">Password</label>
+                    <input id="password" placeholder="Password" type="password" required/>
+                    <button style="background-color: darkgrey;" type="submit">Sign in</button>
+                </div>
+            </form>
+        </div>
+
+        <div class="modal" id="signup">
+            <form action="/action_page.php" class="modal-content animate" method="POST">
+                <div class="imgcontainer">
+                    <span onclick="document.getElementById('signup').style.display='none'"
+                    class="close" title="Close Modal">&times;</span>
+                </div>
+                <div class="container">
+                    <h2 style="text-align: center">Sign up</h2>
+                    <label for="name">Name</label>
+                    <input id="name" placeholder="Name" type="text" name="name" required/>
+                    <label for="email">Email</label>
+                    <input id="email" placeholder="Email" type="email" name="email" required/>
+                    <label for="name">Username</label>
+                    <input id="name" placeholder="Username" type="text" required />
+                    <label for="password">Password</label>
+                    <input id="password" placeholder="Password" type="password" name="password" required/>
+                    <label for="Password">Repeat Password</label>
+                    <input id="password" placeholder="Password" type="password" name="password" required/>
+                    <button style="background-color: darkgrey;" type="submit">Sign up</button>
+                </div>
+            </form>
+        </div>
+    
 </body>
 </html>
