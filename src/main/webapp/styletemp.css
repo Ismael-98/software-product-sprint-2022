@@ -9,8 +9,14 @@ body{
     color: white;
     position: absolute;
     top: 8px;
-    left: 16px;
+    left: 22px;
   }
+.top-right{
+    color: white;
+    position: absolute;
+    top: 8px;
+    right: 22px;
+}
 .centered {
     font-size: 70px;
     color: white;
