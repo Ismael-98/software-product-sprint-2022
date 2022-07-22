@@ -43,7 +43,12 @@ input:focus{
     top: 8px;
     left: 22px;
 }
-
+.top-right{
+    color: white;
+    position: absolute;
+    top: 8px;
+    right: 22px;
+}
 .centered {
     color: white;
     position: absolute;
