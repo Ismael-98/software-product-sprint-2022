@@ -41,9 +41,14 @@ input:focus{
     color: white;
     position: absolute;
     top: 8px;
-    left: 16px;
+    left: 22px;
 }
-
+.top-right{
+    color: white;
+    position: absolute;
+    top: 8px;
+    right: 22px;
+}
 .centered {
     color: white;
     position: absolute;
@@ -57,8 +62,9 @@ input:focus{
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%); 
-}
+    transform: translate(-50%, -50%);
+  }
+
 .imgcontainer {
     text-align: center;
     margin: 24px 0 12px 0;
