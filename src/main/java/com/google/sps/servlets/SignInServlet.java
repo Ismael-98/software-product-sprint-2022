@@ -61,8 +61,27 @@ public final class SignInServlet extends HttpServlet {
         }
     }
 
+    protected void doOptions(HttpServletRequest req, HttpServletResponse resp) throws IOException
+   {
+       // pre-flight request processing
+       resp.setHeader("Access-Control-Allow-Origin", "*");
+      // resp.setHeader("Access-Control-Allow-Methods", "GET,POST");
+       //resp.setHeader("Access-Control-Allow-Headers");
+   }
+  
+ 
+ @Override
+ public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException{
+   response.setContentType("application/json");
+   response.getWriter().println("{}");
+   return;
+ }
+
+
   @Override
   public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
+      
+      
     BufferedReader reader = request.getReader();
    
 
@@ -158,6 +177,7 @@ public final class SignInServlet extends HttpServlet {
 
         response.setContentType("application/json;");
         response.getWriter().println(json);
+        
         //response.sendRedirect("/exisitingUsername.html");
 
        // System.out.print("Stock2: "+gson.toJson(profile));
