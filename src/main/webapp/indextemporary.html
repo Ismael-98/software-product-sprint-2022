@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100;200;300;400;500&display=swap" rel="stylesheet">
+<script src="script2.js"></script>
 </head>
 <body>
     <div class="top-left">
@@ -31,7 +32,11 @@
     </div>
 
         <div class="modal" id="signin">
+<<<<<<< HEAD
             <form action="/sign-up" class="modal-content animate" method="POST">
+=======
+            <form class="modal-content animate" method="POST">
+>>>>>>> bd92c4a1b4765219f6b7044b686052d3deff7e3a
                 <div class="imgcontainer">
                     <span onclick="document.getElementById('signin').style.display='none'" 
                     class="close" title="Close Modal">&times;</span>
@@ -39,10 +44,11 @@
                 <div class="container">
                     <h2 style="text-align: center">Sign in</h2>
                     <label for="name">Username</label>
-                    <input id="name" placeholder="Username" type="text" required />
+                    <input id="name" placeholder="Username" name="un-signin" type="text" required />
                     <label for="password">Password</label>
-                    <input id="password" placeholder="Password" type="password" required/>
-                    <button style="background-color: darkgrey;" type="submit">Sign in</button>
+                    <input id="password2" placeholder="Password" type="password" name = "pw-signin" required/>
+                    <button style="background-color: darkgrey;" type="button" onclick="signIn()">Sign in</button>
+                    <a id = "switchButton" href="signedIn.html"display="none"> </a>
                 </div>
             </form>
         </div>
@@ -56,15 +62,15 @@
                 <div class="container">
                     <h2 style="text-align: center">Sign up</h2>
                     <label for="name">Name</label>
-                    <input id="name" placeholder="Name" type="text" name="name" required/>
+                    <input id="name2" placeholder="Name" type="text" name="name" required/>
                     <label for="email">Email</label>
                     <input id="email" placeholder="Email" type="email" name="email" required/>
                     <label for="name">Username</label>
-                    <input id="name" placeholder="Username" type="text" name="username" required />
+                    <input id="name1" placeholder="Username" type="text" name="username" required />
                     <label for="password">Password</label>
                     <input id="password" placeholder="Password" type="password" name="password" required/>
                     <label for="Password">Repeat Password</label>
-                    <input id="password" placeholder="Password" type="password" name="password" required/>
+                    <input id="password1" placeholder="Password" type="password" name="password" required/>
                     <button style="background-color: darkgrey;" type="submit">Sign up</button>
                 </div>
             </form>
