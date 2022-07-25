@@ -52,12 +52,16 @@ public final class SignInServlet extends HttpServlet {
         private String username;
         private String password;
         private String email;
+        private boolean correctCreds;
 
-        public SignIn(String name, String username,String pw, String email) {
+        public SignIn(String name, String username,String pw, String email,Boolean correctCreds) {
             this.fullName = name;
             this.username=username;
             this.password = pw;
             this.email=email;
+            this.correctCreds = correctCreds;
+
+
         }
     }
 
@@ -145,8 +149,10 @@ public final class SignInServlet extends HttpServlet {
         //do something if doesn't have profile w hasProfile
         System.out.println("No result!");
         response.setContentType("application/json;");
-        response.getWriter().println("{}");
-        response.sendRedirect("/loginIncorrect.html");
+        SignIn profile = new SignIn("","","","",false);
+        Gson gson = new Gson();
+        response.getWriter().println(gson.toJson(profile));
+        
     }
     else {
         
@@ -155,9 +161,12 @@ public final class SignInServlet extends HttpServlet {
       System.out.print("Pass: "+ pass);
       if(!pass.equals(correctPass)) {
         System.out.println("No match");
+        
         response.setContentType("application/json;");
-        response.getWriter().println("{}");
-        response.sendRedirect("/loginIncorrect.html");
+        SignIn profile = new SignIn("","","","",false);
+        Gson gson = new Gson();
+        response.getWriter().println(gson.toJson(profile));
+        
       }
 
       else {
@@ -166,7 +175,7 @@ public final class SignInServlet extends HttpServlet {
         String email = entity.getString("email");
         String password = entity.getString("password");
         System.out.println("Objeect: "+username+fullName+email+password);
-        SignIn profile = new SignIn(fullName,username,password,email);
+        SignIn profile = new SignIn(fullName,username,password,email,true);
 
         
 
