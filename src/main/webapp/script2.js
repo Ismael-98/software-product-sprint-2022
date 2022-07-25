@@ -6,8 +6,7 @@ async function signIn() {
     user = document.getElementById("name").value;
     pass = document.getElementById("password2").value;
 
-    console.log(user);
-    console.log(pass);
+   
 
     username = "("+user+")";
     password = "["+pass+"]";
@@ -27,7 +26,8 @@ async function signIn() {
     body: formData})
 
     textSee = await textResponse.json()
-    console.log(textSee)
+    if(textSee.correctCreds) {
+
     name = textSee.fullName
     email = textSee.email
     username = textSee.username
@@ -38,11 +38,14 @@ async function signIn() {
 
 
     document.getElementById("switchButton").click();
+    }
+    else {
+        alert("Incorrect login credentials, please try again or make an account")
+    }
     
 
-  
-
  }
+ 
 function showProfile() {
  nameDiv = document.getElementById("nameProfile");
  usernameDiv = document.getElementById("usernameProfile");
