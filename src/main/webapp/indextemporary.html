@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Food</title>
+    <link rel="stylesheet" href="styletemp.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100;200;300;400;500&display=swap" rel="stylesheet">
+<script src="script2.js"></script>
+</head>
+<body>
+    <div class="top-left">
+        <h2>Google Food</h2>
+    </div>
+    <a href="/aboutus.html">
+        <div class="top-right">
+            <h2>About Us</h2>
+        </div>
+    </a>
+    <div class="centered2">
+        Recipes for everyone
+    </div>
+    <div class="centered"> 
+        <button onclick="document.getElementById('signin').style.display='block'">
+            Sign in
+        </button>
+        <button onclick="document.getElementById('signup').style.display='block'">
+            Sign up
+        </button>
+    </div>
+
+        <div class="modal" id="signin">
+            <form class="modal-content animate" method="POST">
+                <div class="imgcontainer">
+                    <span onclick="document.getElementById('signin').style.display='none'" 
+                    class="close" title="Close Modal">&times;</span>
+                </div>
+                <div class="container">
+                    <h2 style="text-align: center">Sign in</h2>
+                    <label for="name">Username</label>
+                    <input id="name" placeholder="Username" name="un-signin" type="text" required />
+                    <label for="password">Password</label>
+                    <input id="password2" placeholder="Password" type="password" name = "pw-signin" required/>
+                    <button style="background-color: darkgrey;" type="button" onclick="signIn()">Sign in</button>
+                    <a id = "switchButton" href="signedIn.html"display="none"> </a>
+                </div>
+            </form>
+        </div>
+
+        <div class="modal" id="signup">
+            <form action="/sign-up" class="modal-content animate" method="POST">
+                <div class="imgcontainer">
+                    <span onclick="document.getElementById('signup').style.display='none'"
+                    class="close" title="Close Modal">&times;</span>
+                </div>
+                <div class="container">
+                    <h2 style="text-align: center">Sign up</h2>
+                    <label for="name">Name</label>
+                    <input id="name2" placeholder="Name" type="text" name="name" required/>
+                    <label for="email">Email</label>
+                    <input id="email" placeholder="Email" type="email" name="email" required/>
+                    <label for="name">Username</label>
+                    <input id="name1" placeholder="Username" type="text" name="username" required />
+                    <label for="password">Password</label>
+                    <input id="password" placeholder="Password" type="password" name="password" required/>
+                    <label for="Password">Repeat Password</label>
+                    <input id="password1" placeholder="Password" type="password" name="password" required/>
+                    <label for="dob">Date of Birth</label><br>
+                    <input style="width: 120px;" date = "dob" placeholder="Birthday" type="date" name="dob" required/>
+                    <br>Do you have any allergies?    
+                    <label for="yes">Yes</label>
+                    <input style="width: 25px;" type="radio" id="yes" name="allergy" value="Yes">
+                    <label for="no">No</label>
+                    <input style="width: 25px;" type="radio" id="no" name="allergy" value="No"><br>
+                    <button style="background-color: darkgrey;" type="submit">Sign up</button>
+                </div>
+            </form>
+        </div>
+</body>
+</html>
