@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style1.css" />
+    <script src="script2.js"></script>
+  </head>
+  <body>
+    <main id="main" class="large-8 medium-8 columns" role="main">
+    <header class="article-header">
+        <h1 class="entry-title single-title" itemprop="headline">Advanced Recipe Search</h1>
+    </header>
+
+    <div class="row collapse">
+        <div class="small-12 columns">
+        <p>Enter your search keywords and choose from multiple <span data-tooltip="1mvrpj-tooltip" aria-haspopup="true" class="has-tip" data-disable-hover="false" tabindex="2" title="" aria-describedby="ir2kbl-tooltip" data-yeti-box="ir2kbl-tooltip" data-toggle="ir2kbl-tooltip" data-resize="ir2kbl-tooltip" data-events="resize">filters</span> below.</p>
+        <form action="https://www.allergicliving.com/advanced-search/" method="GET" name="wp-advanced-search">
+            <input name="search_query" type="text" value="" placeholder="Search recipe keywords..." />
+            <div class="columns large-4">
+                <div class="label-container">
+                    <label for="tax_recipe_category">Allergen</label>
+                </div>
+                <select id="tax_recipe_category" name="tax_recipe_category[]" multiple="multiple" class="wpas-multi-select ">
+                    <option value="eggs">Eggs</option>
+                    <option value="fish">Fish</option>
+                    <option value="milkdairy">Milk/Dairy</option>
+                    <option value="mustard">Mustard</option>
+                    <option value="legumes">Other Legumes</option>
+                    <option value="peanut-allergen-diet">Peanut</option>
+                    <option value="sesame">Sesame</option>
+                    <option value="shellfish">Shellfish</option>
+                    <option value="soy">Soy</option>
+                    <option value="sulphites">Sulphites</option>
+                    <option value="tree-nut-allergen-diet">Tree Nuts</option>
+                    <option value="wheat-allergen-diet">Wheat</option>
+                </select>
+            </div>
+            <div class="columns large-4">
+                <div class="label-container">
+                <label for="tax_recipe_category">Course/Food Type</label>
+                </div>
+                <select id="tax_recipe_category" name="tax_recipe_category[]" multiple="multiple" class="wpas-multi-select ">
+                <option value="appetizers-course-food-type">Appetizers</option>
+                <option value="breakfast">Breakfast</option>
+                <option value="cakes-cupcakes-course-food-type">Cakes, Cupcakes</option>
+                <option value="cookies-courses-food-types">Cookies</option>
+                <option value="other-desserts-course-food-type">Dessert</option>
+                <option value="drinks-course-food-type">Drinks</option>
+                <option value="lunches-course-food-type">Lunches</option>
+                <option value="main-dishes-course-food-type">Main Dishes</option>
+                <option value="pies-squares-course-food-type">Pies, Squares</option>
+                <option value="salads-course-food-type">Salads</option>
+                </select>
+            </div>
+            <div class="columns large-6">
+                <div class="label-container">
+                <label for="tax_recipe_category">Special Diet</label>
+                </div>
+                <select id="tax_recipe_category" name="tax_recipe_category[]" multiple="multiple" class="wpas-multi-select ">
+                <option value="gluten-free-recipes-2">Celiac, Gluten-free</option>
+                <option value="for-kids">Vegetarian</option>
+                <option value="vegan-allergen-diet">Vegan</option>
+                <option value="for-kids">Pregnant</option>
+                </select>
+            </div>
+            <input type="submit" value="Search" />
+            <input type="reset" value="Reset" />
+            <button>Clear</button>
+            <input name="wpas_id" type="hidden" value="advanced-search" />
+            <input name="wpas_submit" type="hidden" value="1" />
+        </form>
+    </div>
+    <div id="table_div"></div>
+    <!-- <div class="query-controls">
+        <div class="row">
+        <div class="medium-9 columns">
+        <div class="query-controls__search">
+        Search for: ""
+        </div>
+        </div>
+        <div class="medium-3 columns">
+        <div class="query-controls__count">
+        Found 371 results </div>
+        </div>
+        </div>
+    </div> -->
+  </body>
+</html>

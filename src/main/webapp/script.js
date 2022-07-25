@@ -16,3 +16,4 @@ function drawTable() {
     table.draw(data, {showRowNumber: true, width: '100%', height: '100%'});    
   });
 }
+
