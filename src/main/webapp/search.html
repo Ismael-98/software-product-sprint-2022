@@ -25,7 +25,6 @@
         <h1 class="entry-title single-title" itemprop="headline">Advanced Recipe Search</h1>
     </header>
 
-
     <div class="row collapse">
         <div class="small-12 columns">
         <p>Enter your search keywords and choose from multiple <span data-tooltip="1mvrpj-tooltip" aria-haspopup="true" class="has-tip" data-disable-hover="false" tabindex="2" title="" aria-describedby="ir2kbl-tooltip" data-yeti-box="ir2kbl-tooltip" data-toggle="ir2kbl-tooltip" data-resize="ir2kbl-tooltip" data-events="resize">filters</span> below.</p>
@@ -85,7 +84,22 @@
             <input name="wpas_submit" type="hidden" value="1" />
         </form>
     </div>
-    <div id="table_div"></div>
+
+    <div class="container">
+        <table id="example" class="table table-striped table-bordered" cellspacing="0" width="100%"></table>
+        <div class="form-group">
+            <label for="csvImport">Pasted CSV</label>
+            <textarea class="form-control" id="csvImport" name="csvImport" rows="15">Food Name, Ingredients
+    Miso Butter,Butter
+    Chicken Nuggets, Chicken
+    </textarea>
+        </div>
+        <button class="btn btn-default" id="populateTable">Populate Table</button>
+    </div>
+
+
+
+    <!-- <div id="table_div"></div> -->
     <!-- <div class="query-controls">
         <div class="row">
         <div class="medium-9 columns">
