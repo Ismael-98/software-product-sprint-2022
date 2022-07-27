@@ -61,12 +61,14 @@ function showProfile() {
 
 }
 
-
- 
-    
-
   // const textFromResponse = await responseFromServer.json();
    // console.log(textFromResponse); 
 
- 
+function yesnoCheck() {
+if (document.getElementById('yesCheck').checked) {
+    document.getElementById('ifYes').style.visibility = 'visible';
+}
+else document.getElementById('ifYes').style.visibility = 'hidden';
+
+}
 

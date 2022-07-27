@@ -69,13 +69,17 @@
                     <input id="password1" placeholder="Password" type="password" name="password" required/>
                     <label for="dob">Date of Birth</label><br>
                     <input style="width: 120px;" date = "dob" placeholder="Birthday" type="date" name="dob" required/>
-                    <br>Do you have any allergies?    
+                    <br>Do you have any allergies?
                     <label for="yes">Yes</label>
-                    <input style="width: 25px;" type="radio" id="yes" name="allergy" value="Yes">
+                    <input type="radio" style="width: 25px;" onclick="javascript:yesnoCheck();" name="yesno" id="yesCheck">
                     <label for="no">No</label>
-                    <input style="width: 25px;" type="radio" id="no" name="allergy" value="No"><br>
+                    <input type="radio" style="width: 25px;" onclick="javascript:yesnoCheck();" name="yesno" id="noCheck"><br>
+                    <div id="ifYes" style="visibility:hidden">
+                        List your allergies:
+                        <input type='text' placeholder="e.g eggs, shrimp" id='yes' name='yes'><br>
+                    </div>
                     <button style="background-color: darkgrey;" type="submit">Sign up</button>
-                </div>
+                </div>            
             </form>
         </div>
 </body>
