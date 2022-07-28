@@ -72,7 +72,7 @@ public final class SignUpServlet extends HttpServlet {
             .build();
     datastore.put(taskEntity);
 
-    response.sendRedirect("/index.html");
+    response.sendRedirect("https://summer22-sps-47.appspot.com/index.html");
     }
 
 }
