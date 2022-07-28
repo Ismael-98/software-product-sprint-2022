@@ -72,7 +72,7 @@ public final class SignUpServlet extends HttpServlet {
             .build();
     datastore.put(taskEntity);
 
-    response.sendRedirect("/indextemporary.html");
+    response.sendRedirect("/index.html");
     }
 
 }
